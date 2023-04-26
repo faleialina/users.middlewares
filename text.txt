@@ -1,0 +1,46 @@
+1. Поставить сервер. Установить необходимые для дальнейшей работы пакеты npm
+Добавить 5 маршрутов в app.js (смотреть в приложении):
+GET “/user/”
+GET “/user/:id”
+POST “/user/”
+PUT “/user/:id”
+DELETE “/user/:id”
+2. Добавить middleware для ошибок. Добавить date-parse middleware
+3. Добавить директорию controller. Роутеры из app.js перенести в соответствующий
+файл. Внедрить middleware с url “/user”, который перенаправляет в контроллер.
+4. Добавить json
+5. Добавить сервисы по CRUD к каждому роуту
+GET “/user/” body request ->
+GET “/user/:id” body request ->
+POST “/user/” body request ->
+PUT “/user/:id” body request ->
+DELETE “/user/:id” body request ->
+{ "Hanna", "surname": "Pleshko", "email": "hannapleshko@gmail.com", "pwd": "12345678" },
+• GET “/user” – получние всех элементов json
+• GET “/user/:id” – получение отдельного элемента по id из json
+• POST “/user” – с клиента приходит объект вида { "name": "Hanna", "surname":
+"Pleshko", "email": "hannapleshko@gmail.com", "pwd": "12345678" }. Добавить в json
+объект в том случае, если совпадений с почтой в массиве json нет. Вернуть клиенту
+json, статус
+• PUT “/user/:id” – обновить в json объект только в том случае, если есть совпадения с
+id json. Вернуть клиенту массив и статус
+• DELETE “/user/:id” удалить из массива json объект только в том случае, если id
+совпадает. Вернуть клиенту массив и статус
+[
+{ "id": 1, "name": "Hanna", "surname": "Pleshko", "email": "hannapleshko@gmail.com", "pwd":
+"12345678" },
+{ "id": 2, "name": "Есения", "surname": "Грант", "email": "yesgrant@mail.ru", "pwd": "12345678" },
+{ "id": 3, "name": "Анастасия", "surname": "Павлова", "email": "pavlova@gmail.com", "pwd":
+"12345678" },
+{ "id": 4, "name": "Мария", "surname": "Гардон", "email": "gardon@mail.ru", "pwd": "12345678" },
+{ "id": 5, "name": "Марта", "surname": "Котикова", "email": "martaktik@gmail.com", "pwd": "12345678"
+},
+{ "id": 6, "name": "Борис", "surname": "Юревич", "email": "testdata@gmail.com", "pwd": "12345678" },
+{ "id": 7, "name": "Рыжик", "surname": "Рыжий", "email": "email@gmail.com", "pwd": "12345678" },
+{ "id": 8, "name": "Рейна", "surname": "Собачкова", "email": "dogdoggav@mail.ru", "pwd": "12345678" },
+{ "id": 9, "name": "Максим", "surname": "Николаев", "email": "hanna@gmail.com", "pwd": "12345678" },
+{ "id": 10, "name": "Константин", "surname": "Константинов", "email": "konst@mail.ru", "pwd":
+"12345678" },
+{ "id": 11, "name": "Иван", "surname": "Иванов", "email": "ivaniv@gmail.com", "pwd": "12345678" },
+{ "id": 12, "name": "Николай", "surname": "Николаев", "email": "nikkkk@mail.ru", "pwd": "12345678" }
+]
