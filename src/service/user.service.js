@@ -58,5 +58,9 @@ function upUsersById(id, name, surname, email, pwd) {
 
     return filtered;
 };
+function deleteUsersById(id) {
+    const filtered = arr.filter((elem) => elem.id != id);
+    return filtered;
+};
 
-module.exports = { getAllUsers, getUsersById, createUsersById, upUsersById };
+module.exports = { getAllUsers, getUsersById, createUsersById, upUsersById, deleteUsersById };
