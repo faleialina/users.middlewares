@@ -1,18 +1,12 @@
-
 const express = require('express');
-const bodyParser = require('body-parser');
-const { router } = require('./controller/user.controller.js');
-
 const app = express();
+const bodyParser = require('body-parser');
+const user = require('./controller/user.controller');
 
-app.use(bodyParser.json());
+app.use(bodyParser.json())
 
-app.use('/user', router);
+app.use('/user', user);
 
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
-});
+app.use((er, req, res, next) => res.send(er.message))
 
-
-module.exports = { app };
+module.exports = app;

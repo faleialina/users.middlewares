@@ -1,6 +1,3 @@
-const { app } = require('./src/app.js');
+const app = require('./src/app');
 
-
-app.listen(3000, () => {
-    console.log('server is run');
-});
+app.listen(3000, () => console.log('server is ranning'));
