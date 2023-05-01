@@ -29,7 +29,7 @@ function createUser(name, surname, email, pwd) {
 function updateUser(id, name, surname, email, pwd) {
     const arr = JSON.parse(fs.readFileSync(path));
     const filtered = arr.filter((elem) => elem.id != id);
-    if (filtered.length == arr.length) throw new Error('такого id нет');
+    if (filtered.length == arr.length) throw new Error('no such id');
 
     filtered.push({
         id: id,
