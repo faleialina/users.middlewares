@@ -1,19 +1,5 @@
 [
     {
-        "id": 4,
-        "name": "Мария",
-        "surname": "Гардон",
-        "email": "gardon@mail.ru",
-        "pwd": "12345678"
-    },
-    {
-        "id": 5,
-        "name": "Марта",
-        "surname": "Котикова",
-        "email": "martaktik@gmail.com",
-        "pwd": "12345678"
-    },
-    {
         "id": 6,
         "name": "Борис",
         "surname": "Юревич",
@@ -74,5 +60,26 @@
         "surname": "Pleshko",
         "email": "hannapleshko@gmail.com",
         "pwd": "12345678"
+    },
+    {
+        "id": 12,
+        "name": "Hanna",
+        "surname": "Pleshko",
+        "email": "hannapleshko@gmail.com",
+        "pwd": "1234555678"
+    },
+    {
+        "id": 13,
+        "name": "Hanna",
+        "surname": "Pleshko",
+        "email": "hannapleshko@gmail.com",
+        "pwd": "1234555678"
+    },
+    {
+        "id": 12,
+        "name": "Hanna",
+        "surname": "Pleshko",
+        "email": "hannapleshko@gmail.com",
+        "pwd": "1234555678"
     }
 ]
